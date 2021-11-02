@@ -1,1 +1,25 @@
-hola: hola
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  apiId: test
+  apiVersion: 1.0.0
+  tier: 2
+  name: test
+  description: The API allows clients to read attributes from configured attributestores
+  domain: Data
+  capabilities:
+    - Access
+  sourceRepository: https://github.expedia.biz/eg-data-attribute-store/attribute-store-read-template 
+  contactEmail: AttributeStoreRead-SDKDev@expediagroup.com
+  contactSlackChannel: "https://expedia.slack.com/archives/C025C3UCMGX"
+  tags:
+    - attribute-stores
+    - query
+    - access
+    - DataAI-SDK
+spec:
+  type: openapi
+  lifecycle: PLANNED
+  owner: Attribute Store SDK team
+  definition:
+    $text: https://github.expedia.biz/eg-business-domains/rest-api-definitions/blob/master/definitions/Data/Access/AttributeStore/v1/openapi.yml
